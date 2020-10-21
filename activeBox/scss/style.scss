@@ -1,0 +1,590 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	color: #6c7279;
+	background-color: #fff;
+}
+body, html {
+	scroll-behavior: smooth;
+}
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 10px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.btn {
+	display: inline-block;
+	border: 0;
+	cursor: pointer;
+	border-radius: 2px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.6;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	padding: 13px 50px;
+	box-sizing: border-box;
+	transition: background .1s linear;
+	&:hover {
+		background-color: #E32727;
+	}
+	&_red {
+		background-color: #FF4343;
+	}
+	&_big {
+		min-width: 280px;
+	}
+}
+.social-media {
+	display: flex;
+	justify-content: flex-start;
+	flex-grow: 1;
+	align-items: flex-end;
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+		width: 40px;
+		height: 40px;
+		text-decoration: none;
+		border-radius: 2px;
+	}
+}
+.header {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	&.fixed {
+		height: auto;
+		position: fixed;
+		background-color: #2C4058;
+		.header__block{
+			padding: 15px 0;
+			border: 0;
+		}
+	}
+	&__block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px 0;
+		border-bottom: 1px solid #515369;
+	}
+	&__burger {
+		display: none;
+	}
+	&__navigation {
+		display: flex;
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__link {
+		margin-left: 50px;
+		color: #fff;
+		text-decoration: none;
+		opacity: 0.75;
+		transition: opacity .1s linear;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 100px 0 0 0;
+	box-sizing: border-box;
+	background: #31344e url("../img/intro-bg.jpg") center no-repeat;
+	background-size: cover;
+	&__body {
+		width: 100%;
+		max-width: 970px;
+		text-align: center;
+		color: #fff;
+		margin: 0 auto;
+		padding: 10px 0 0 0;
+	}
+	&__title {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 65px;
+		font-weight: 700;
+		line-height: 1.1;
+		text-transform: uppercase;
+		margin: 0 0 20px 0;
+	}
+	&__subtitle {
+		font-family: 'Raleway', sans-serif;
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 1.5;
+		margin: 0 0 80px 0;
+	}
+}
+.features {
+	padding: 120px 0 50px 0;
+	&__body {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	&__item {
+		flex: 0 1 300px;
+		text-align: center;
+		margin: 0 15px 70px 15px;
+	}
+	&__img {
+		margin: 0 0 33px 0;
+		&:hover {
+			animation: shake 0.5s 1;
+		}
+	}
+	&__title {
+		font-size: 14px;
+		font-weight: 800;
+		color: #2d3033;
+		text-transform: uppercase;
+		margin: 0 0 20px 0;
+	}
+	&__description {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: #6c7279;
+	}
+}
+.works {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	overflow: hidden;
+	&__item {
+		height: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	&__content {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: rgba(232, 69, 69, 0.8);
+		opacity: 0;
+		transition: opacity 1s ease 0s;
+		&:hover{
+			opacity:1;
+		}
+	}
+	&__name {
+		font-size: 14px;
+		font-weight: 700;
+		color: #fff;
+		margin: 0 0 15px 0;
+	}
+	&__description {
+		font-size: 14px;
+		font-weight: 400;
+		color: #fff;
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.team {
+	&__body {
+		display: flex;
+		justify-content: space-around;
+		align-items: stretch;
+		flex-wrap: wrap;
+		padding: 100px 0 60px 0;
+	}
+	&__person {
+		flex: 0 1 22%;
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 40px 0;
+	}
+	&__img {
+		margin: 0 0 28px 0;
+		width: 100%;
+		text-align: center;
+		overflow: hidden;
+		img {
+			width: 100%;
+			transition: all 1s ease 0s;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+	&__name {
+		margin: 0 0 10px 0;
+		font-size: 22px;
+		font-weight: 400;
+		color: #2d3033;
+	}
+	&__position {
+		margin: 0 0 24px 0;
+		font-size: 13px;
+		font-weight: 400;
+		color: #e84545;
+		text-transform: uppercase;
+	}
+	&__description {
+		margin: 0 0 25px 0;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: #6c7279;
+		text-align: justify;
+		text-indent: 1em;
+	}
+	&__link {
+		color: #C6CBCD;
+		border: 1px solid #E7ECEE;
+		margin: 0 4px 0 0;
+		transition: all 500ms ease 0s;
+		&:hover{
+			background-color: #8D8D8D;
+			color: #fff;
+		}
+	}
+}
+.clients {
+	height: 500px;
+	overflow: hidden;
+	&__item{
+		display: flex;
+		height: 500px;
+		background-color: #5B3249;
+	}
+	&__photo {
+		width: 50%;
+		height: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__text {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	&__content {
+		max-width: 600px;
+		margin: 0 0 0 8%;
+	}
+	&__rewiew {
+		font-family: 'Cardo', serif;
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 1.15;
+		color: #ffffff;
+		margin: 0 0 55px 0;
+	}
+	&__name {
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 1.5;
+		color: #ffffff;
+		text-transform: uppercase;
+	}
+}
+.download {
+	margin: 0 auto;
+	text-align: center;
+	padding: 100px 0;
+	&__title {
+		font-size: 28px;
+		font-weight: 300;
+		line-height: 1;
+		color: #2d3033;
+		margin: 0 0 10px 0;
+	}
+	&__subtitle {
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 1.5;
+		color: #2d3033;
+		text-transform: uppercase;
+		margin: 0 0 36px 0;
+	}
+}
+.footer {
+	text-align: center;
+	background-color: #2C4058;
+	&__body {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		padding: 50px 0 0 0;
+	}
+	&__column {
+		flex: 0 1 350px;
+		margin: 0 0 50px 0;
+	}
+	&__title {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0 0 15px 0;
+	}
+	&__paragraph {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.5;
+		color: #ABADBB;
+	}
+	&__social-media {
+		justify-content: center;
+	}
+	&__link {
+		color: #fff;
+		border: 2px solid #fff;
+		margin: 0 7px 0 0;
+		transition: all 500ms ease 0s;
+		&:hover{
+			background-color: #fff;
+			color: #353C65;
+		}
+	}
+}
+.slick-dots {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	right: 25%;
+	padding: 0 0 50px 0;
+	li.slick-active {
+		button {
+			opacity: 1;
+		}
+	}
+	button {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		font-size: 0;
+		opacity: 0.2;
+		margin:0 3px;
+	}
+}
+
+@keyframes shake{
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@media screen and (max-width: 992px) {
+	.intro {
+		&__title {
+			font-size: 52px;
+			padding: 0 4%;
+		}
+		&__subtitle {
+			padding: 0 4%;
+		}
+	}
+	.team {
+		&__person {
+			flex: 0 1 40%;
+		}
+	}
+	.clients {
+		&__item{
+			flex-direction: column;
+			align-items: center;
+		}
+		&__photo {
+			width: 100%;
+		}
+		&__text {
+			width: 100%;;
+			align-items: center;
+		}
+		&__content {
+			margin: 0;
+			padding: 0 5%;
+		}
+		&__rewiew {
+			font-size: 30px;
+			color: #ffffff;
+			margin: 0 0 30px 0;
+		}
+		&__name {
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 1.5;
+			color: #ffffff;
+			text-transform: uppercase;
+		}
+	}
+	.slick-dots {
+		right: 40%;
+		padding: 0 0 10px 0;
+	}
+}
+@media screen and (max-width: 820px) {
+	body.lock {
+		overflow: hidden;
+	}
+	.header{
+		&__navigation {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			overflow: scroll;
+			background: #343491;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			font-size: 22px;
+			transition: all 300ms ease 0ms;
+			&.active {
+				top: 0;
+			}
+		}
+		&__link {
+			margin: 0 0 30px 0;
+			transition: opacity .1s linear;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&__burger {
+			display: block;
+			width: 30px;
+			height: 20px;
+			position: relative;
+			z-index: 6;
+			right: 10px;
+			&:before, &:after{
+				position: absolute;
+				content: '';
+				background: #fff;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				transition: all 300ms ease 0ms;
+			}
+			&:before {
+				top: 0;
+			}
+			&:after {
+				bottom: 0;
+			}
+			span {
+				position: absolute;
+				background: #fff;
+				left: 0;
+				top: 9px;
+				width: 100%;
+				height: 2px;
+				transition: all 300ms ease 0ms;
+				font-size: 0;
+				color: transparent;
+			}
+			&.active {
+				span {
+					transform: scale(0);
+				}
+				&:before {
+					transform: rotate(45deg);
+					top: 9px;
+				}
+				&:after {
+					transform: rotate(-45deg);
+					bottom: 9px;
+				}
+			}
+		}
+	}
+	.intro {
+		&__title {
+			font-size: 48px;
+			margin: 0 0 30px 0;
+		}
+		&__subtitle {
+			font-size: 18px;
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.team {
+		&__person {
+			flex: 0 1 70%;
+		}
+	}
+	.download {
+		padding: 70px 0 50px 0;
+		&__title {
+			line-height: 1.5;
+		}
+	}
+	.btn--big {
+		min-width: 250px;
+	}
+}
+@media screen and (max-width: 576px) {
+	.intro {
+		&__title {
+			font-size: 34px;
+		}
+		&__subtitle {
+			font-size: 16px;
+		}
+	}
+	.features {
+		padding: 70px 0 30px 0;
+	}
+	.clients {
+		&__rewiew {
+			font-size: 24px;
+		}
+	}
+}
