@@ -58,7 +58,7 @@ $(document).ready(function () {
 	});
 
 	//Smooth scroll
-	$('.header__link').on('click', function (event) {
+	$('.header__link, .header__logo').on('click', function (event) {
 		event.preventDefault();
 
 		let targetId = this.href.substr(this.href.lastIndexOf('#'));
