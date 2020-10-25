@@ -3,14 +3,19 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>Document</title>
 
 	<link rel="stylesheet" href="style/reset.css">
 	<link rel="stylesheet" href="style/style.css">
+	<link rel="shortcut icon" href="img/logo.svg">
 
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
 	<script src="https://kit.fontawesome.com/fc373638b0.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,20 +23,20 @@
 		<div class="wrapper">
 			<div class="header__body">
 				<a href="#top" class="header__logo">luxestate</a>
-				<div class="header__burger">
-					<span>Menu</span>
-				</div>
 				<nav class="header__menu">
-					<ul class="menu">
-						<li><a href="#statistic" class="header__link">about</a></li>
-						<li><a href="#apartments" class="header__link">apartment</a></li>
-						<li><a href="#hotItWork" class="header__link">how it work</a></li>
-						<li><a href="#agents" class="header__link">agents</a></li>
-						<li><a href="#" class="header__link contacts">contact us</a></li>
-						<li><a href="#" class="header__link">join us</a></li>
-						<li><a href="#" class="header__link">getting started</a></li>
-					</ul>
+					<a href="#statistic" class="header__link">about</a>
+					<a href="#apartments" class="header__link">apartment</a>
+					<a href="#steps" class="header__link">how it work</a>
+					<a href="#services" class="header__link">services</a>
+					<a href="#agents" class="header__link">agents</a>
 				</nav>
+				<div class="header__buttons">
+					<a href="#" class="header__link">join us</a>
+					<a href="#" class="header__link">getting started</a>
+				</div>
+				<div class="header__burger">
+					<span></span>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -47,7 +52,7 @@
 					</div>
 				</div>
 			</div>
-		</section> <!-- /statistic -->
+		</section>
 
 		<section class="statistic" id="statistic">
 			<div class="wrapper">
@@ -207,12 +212,17 @@
 			</div>
 		</section> <!-- /apatrments -->
 
-		<section class="steps" id="hotItWork">
+		<section class="steps" id="steps">
 			<div class="wrapper">
 				<div class="steps__body">
 					<h2 class="steps__title">how it work?</h2>
 					<div class="steps__description">
-						<p class="steps__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p class="steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et
+							laboriosam voluptate neque voluptas eveniet, quisquam vitae aliquam tempore rem id iure aut
+							amet, quidem nulla officiis, quae magni nobis.Vitae ullam, nam assumenda officiis, obcaecati
+							aspernatur possimus ex quo, expedita libero architecto quod quas? Aspernatur sunt maiores,
+							esse aliquam temporibus dolorem debitis illum harum voluptatibus, labore, corrupti optio
+							qui?</p>
 						<p class="steps__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
 							Consequatur, vitae, ipsum.</p>
 					</div>
@@ -246,14 +256,20 @@
 			</div>
 		</section> <!-- /steps -->
 
-		<section class="services">
+		<section class="services" id="services">
 			<div class="wrapper">
 				<div class="services__body">
 					<h2 class="services__title">Services</h2>
 					<p class="services__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi illum cum adipisci,
-						assumenda ex corrupti totam commodi repellat voluptates modi esse cupiditate libero consequatur
-						quibusdam sequi beatae possimus quis?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium deleniti odit
+						mollitia assumenda inventore quaerat hic consectetur eligendi, quis excepturi eius sit non
+						aperiam autem vitae atque fugiat totam.
+						Autem vel minima corporis impedit aliquid itaque architecto temporibus aspernatur eaque saepe
+						sequi porro quisquam, perferendis dolore, odio libero! Quas excepturi incidunt reprehenderit
+						perspiciatis odio harum voluptatibus deleniti provident nam.
+						Veritatis, odit ex facere praesentium perferendis exercitationem asperiores, culpa maiores, iste
+						autem saepe unde non tempora rem quidem dicta accusantium veniam consectetur fugit minus aliquam
+						voluptatem itaque? Corrupti, eos ad.
 					</p>
 					<div class="services__block">
 						<div class="services__background">
@@ -282,8 +298,6 @@
 									maiores placeat aliquid quam accusamus velit adipisci, provident, nobis vero ex
 									laborum.</p>
 							</div>
-
-
 						</div>
 					</div>
 				</div> <!-- /services__body -->
@@ -295,9 +309,12 @@
 				<div class="agents__body">
 					<h2 class="agents__title">meet our agents</h2>
 					<div class="agents__description">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Voluptate accusamus
-							consectetur quidem.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nemo eligendi quibusdam autem
+							eveniet tempora minima iusto nulla tenetur, veniam obcaecati optio incidunt dolor
+							laboriosam. Deleniti repellat delectus ratione nulla?Magnam nam fugiat harum, repellendus
+							inventore voluptate, corporis voluptas dolore accusantium provident ex a quaerat praesentium
+							explicabo libero! Quo assumenda nemo cupiditate aut similique consequatur dolorem magni
+							atque soluta doloribus?</p>
 					</div>
 					<div class="agents__cards">
 						<div class="agents__card card-agent">
@@ -343,20 +360,21 @@
 				</div> <!-- /agents__body -->
 			</div>
 		</section> <!-- /agents -->
+
 		<section class="offers">
 			<div class="wrapper">
 				<div class="offers__body">
-					<div class="offers__item offer">
-						<div class="offer__photo">
+					<div class="offers__item">
+						<div class="offers__photo">
 							<img src="img/apartment3.jpg" alt="apartment">
-							<div class="offer__location">
+							<p class="offers__location">
 								<i class="fas fa-map-marker-alt"></i>
 								Melbourn, Australia
-							</div>
+							</p>
 						</div>
-						<div class="offer__info">
-							<h3 class="offer__title">super awesome add</h3>
-							<p class="offer__description">
+						<div class="offers__info">
+							<h3 class="offers__title">super awesome add</h3>
+							<p class="offers__description">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								Magnam labore, culpa reprehenderit veritatis perspiciatis debitis
 								officia incidunt modi atque repellat deserunt laudantium hic saepe,
@@ -364,36 +382,36 @@
 							</p>
 						</div>
 					</div>
-					<div class="offers__item offer">
-						<div class="offer__info">
-							<h3 class="offer__title">super awesome add</h3>
-							<p class="offer__description">
+					<div class="offers__item">
+						<div class="offers__info">
+							<h3 class="offers__title">super awesome add</h3>
+							<p class="offers__description">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								Magnam labore, culpa reprehenderit veritatis perspiciatis debitis
 								officia incidunt modi atque repellat deserunt laudantium hic saepe,
 								assumenda nemo reiciendis aliquam ea corporis.13
 							</p>
 						</div>
-						<div class="offer__photo">
+						<div class="offers__photo">
 							<img src="img/apartment4.jpg" alt="apartment">
-							<div class="offer__location">
+							<p class="offers__location">
 								<i class="fas fa-map-marker-alt"></i>
 								Melbourn, Australia
-							</div>
+							</p>
 						</div>
 					</div>
-					<div class="offers__item offer">
-						<div class="offer__photo">
+					<div class="offers__item">
+						<div class="offers__photo">
 							<img src="img/apartment3.jpg" alt="apartment">
 						</div>
-						<div class="offer__info">
-							<h3 class="offer__title">super awesome add</h3>
-							<p class="offer__description">
+						<div class="offers__info">
+							<h3 class="offers__title">super awesome add</h3>
+							<p class="offers__description">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								Magnam labore, culpa reprehenderit veritatis perspiciatis debitis
 								officia incidunt modi atque repellat deserunt
 							</p>
-							<a href="#" class="offer__button">show me more</a>
+							<a href="#" class="offers__button">show me more</a>
 						</div>
 					</div>
 				</div> <!-- /offers__body -->
@@ -415,34 +433,33 @@
 				</div>
 				<div class="footer__links links">
 					<div class="links__column">
-						<p class="links__subtitle">luxestate</p>
-						<a href="#">agents</a>
-						<a href="#">hunters</a>
+						<h4 class="links__subtitle">luxestate</h4>
+						<a class="links__link" href="#">agents</a>
+						<a class="links__link" href="#">hunters</a>
 					</div>
 					<div class="links__column">
-						<p class="links__subtitle">company</p>
-						<a href="#">about</a>
-						<a href="#">FAQ</a>
-						<a href="#">contact</a>
-						<a href="#">social</a>
+						<h4 class="links__subtitle">company</h4>
+						<a class="links__link" href="#">about</a>
+						<a class="links__link" href="#">FAQ</a>
+						<a class="links__link" href="#">contact</a>
+						<a class="links__link" href="#">social</a>
 					</div>
 					<div class="links__column">
-						<p class="links__subtitle">product</p>
-						<a href="#">appartments</a>
-						<a href="#">how it works</a>
+						<h4 class="links__subtitle">product</h4>
+						<a class="links__link" href="#">appartments</a>
+						<a class="links__link" href="#">how it works</a>
 					</div>
 					<div class="links__column">
-						<p class="links__subtitle">services</p>
-						<a href="#">renting</a>
-						<a href="#">selling</a>
-						<a href="#">building</a>
+						<h4 class="links__subtitle">services</h4>
+						<a class="links__link" href="#">renting</a>
+						<a class="links__link" href="#">selling</a>
+						<a class="links__link" href="#">building</a>
 					</div>
 				</div>
 			</div> <!-- /footer__block -->
 		</div>
 	</footer>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="script.js"></script>
 </body>
 
