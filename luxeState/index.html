@@ -5,14 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Document</title>
+	<title>luxeState</title>
 
 	<link rel="stylesheet" href="style/reset.css">
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="shortcut icon" href="img/logo.svg">
-
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet">
+
 	<script src="https://kit.fontawesome.com/fc373638b0.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.js"
 		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -45,7 +45,7 @@
 		<section class="intro">
 			<div class="wrapper">
 				<div class="intro__body">
-					<p class="intro__text">find your new<br>modern apartment</p>
+					<h2 class="intro__text">find your new<br>modern apartment</h2>
 					<div class="intro__contacts">
 						<p><i class="fas fa-phone-alt"></i>(000)1234-567</p>
 						<p><i class="fas fa-map-marker-alt"></i>Melbourn, Australia</p>
@@ -57,7 +57,7 @@
 		<section class="statistic" id="statistic">
 			<div class="wrapper">
 				<div class="statistic__body">
-					<div class="statistic__content">
+					<div class="statistic__content text-block">
 						<h2 class="statistic__title">
 							our's company statistics
 						</h2>
@@ -216,7 +216,7 @@
 			<div class="wrapper">
 				<div class="steps__body">
 					<h2 class="steps__title">how it work?</h2>
-					<div class="steps__description">
+					<div class="steps__description text-block">
 						<p class="steps__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et
 							laboriosam voluptate neque voluptas eveniet, quisquam vitae aliquam tempore rem id iure aut
 							amet, quidem nulla officiis, quae magni nobis.Vitae ullam, nam assumenda officiis, obcaecati
@@ -260,17 +260,22 @@
 			<div class="wrapper">
 				<div class="services__body">
 					<h2 class="services__title">Services</h2>
-					<p class="services__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium deleniti odit
-						mollitia assumenda inventore quaerat hic consectetur eligendi, quis excepturi eius sit non
-						aperiam autem vitae atque fugiat totam.
-						Autem vel minima corporis impedit aliquid itaque architecto temporibus aspernatur eaque saepe
-						sequi porro quisquam, perferendis dolore, odio libero! Quas excepturi incidunt reprehenderit
-						perspiciatis odio harum voluptatibus deleniti provident nam.
-						Veritatis, odit ex facere praesentium perferendis exercitationem asperiores, culpa maiores, iste
-						autem saepe unde non tempora rem quidem dicta accusantium veniam consectetur fugit minus aliquam
-						voluptatem itaque? Corrupti, eos ad.
-					</p>
+					<div class="services__description text-block">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium deleniti odit
+							mollitia assumenda inventore quaerat hic consectetur eligendi, quis excepturi eius sit non
+							aperiam autem vitae atque fugiat totam.
+							Autem vel minima corporis impedit aliquid itaque architecto temporibus aspernatur eaque
+							saepe
+							sequi porro quisquam, perferendis dolore, odio libero! Quas excepturi incidunt reprehenderit
+							perspiciatis odio harum voluptatibus deleniti provident nam.
+							Veritatis, odit ex facere praesentium perferendis exercitationem asperiores, culpa maiores,
+							iste
+							autem saepe unde non tempora rem quidem dicta accusantium veniam consectetur fugit minus
+							aliquam
+							voluptatem itaque? Corrupti, eos ad.
+						</p>
+					</div>
 					<div class="services__block">
 						<div class="services__background">
 						</div>
@@ -308,7 +313,7 @@
 			<div class="wrapper">
 				<div class="agents__body">
 					<h2 class="agents__title">meet our agents</h2>
-					<div class="agents__description">
+					<div class="agents__description text-block">
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nemo eligendi quibusdam autem
 							eveniet tempora minima iusto nulla tenetur, veniam obcaecati optio incidunt dolor
 							laboriosam. Deleniti repellat delectus ratione nulla?Magnam nam fugiat harum, repellendus
@@ -431,29 +436,37 @@
 						<input type="text" placeholder="subcribe to our newsletter">
 					</div>
 				</div>
-				<div class="footer__links links">
-					<div class="links__column">
+				<div class="footer__links links one">
+					<div class="links__body">
 						<h4 class="links__subtitle">luxestate</h4>
-						<a class="links__link" href="#">agents</a>
-						<a class="links__link" href="#">hunters</a>
+						<div class="links__column">
+							<a class="links__link" href="#">agents</a>
+							<a class="links__link" href="#">hunters</a>
+						</div>
 					</div>
-					<div class="links__column">
+					<div class="links__body">
 						<h4 class="links__subtitle">company</h4>
-						<a class="links__link" href="#">about</a>
-						<a class="links__link" href="#">FAQ</a>
-						<a class="links__link" href="#">contact</a>
-						<a class="links__link" href="#">social</a>
+						<div class="links__column">
+							<a class="links__link" href="#">about</a>
+							<a class="links__link" href="#">FAQ</a>
+							<a class="links__link" href="#">contact</a>
+							<a class="links__link" href="#">social</a>
+						</div>
 					</div>
-					<div class="links__column">
+					<div class="links__body">
 						<h4 class="links__subtitle">product</h4>
-						<a class="links__link" href="#">appartments</a>
-						<a class="links__link" href="#">how it works</a>
+						<div class="links__column">
+							<a class="links__link" href="#">appartments</a>
+							<a class="links__link" href="#">how it works</a>
+						</div>
 					</div>
-					<div class="links__column">
+					<div class="links__body">
 						<h4 class="links__subtitle">services</h4>
-						<a class="links__link" href="#">renting</a>
-						<a class="links__link" href="#">selling</a>
-						<a class="links__link" href="#">building</a>
+						<div class="links__column">
+							<a class="links__link" href="#">renting</a>
+							<a class="links__link" href="#">selling</a>
+							<a class="links__link" href="#">building</a>
+						</div>
 					</div>
 				</div>
 			</div> <!-- /footer__block -->
