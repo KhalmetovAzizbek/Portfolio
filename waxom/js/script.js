@@ -36,16 +36,18 @@ window.addEventListener('scroll', function () {
 let video = document.querySelector('.video');
 let playBtn = document.querySelector('#play');
 let timePos = document.querySelector('.video-presentation__time');
+let stopq = null;
 
 playBtn.addEventListener('click', function () {
 	if (!playBtn.classList.contains('active')) {
 		video.play();
-		setInterval(function () {
+		stopq = setInterval(function () {
 			timePos.textContent = ('0' + Math.floor(video.currentTime / 60)).slice(-2)
 				+ ':' + ('0' + Math.trunc(video.currentTime % 60)).slice(-2);
 		}, 1000);
 	} else {
 		video.pause();
+		clearInterval(stopq);
 	}
 	playBtn.classList.toggle('active');
 });
@@ -85,20 +87,18 @@ arr.forEach(function (item) {
 window.addEventListener('scroll', function () {
 	if (stat.getBoundingClientRect().top <= window.innerHeight) {
 		if (stop == null) {
-			stop = setInterval(setNums, 50);
+			stop = setInterval(function () {
+				for (let i = 0; i < arr.length; i++) {
+					let cof = Math.ceil(arr[i] / 100);
+					if (nums[i].textContent < arr[i]) {
+						nums[i].textContent = +nums[i].textContent + cof;
+					} else if (nums[i].textContent > arr[i]) {
+						nums[i].textContent = arr[i];
+					} else if (nums[i].textContent >= max) {
+						clearInterval(stop);
+					}
+				}
+			}, 50);
 		}
 	}
 });
-
-function setNums() {
-	for (let i = 0; i < arr.length; i++) {
-		let cof = Math.ceil(arr[i] / 100);
-		if (nums[i].textContent < arr[i]) {
-			nums[i].textContent = +nums[i].textContent + cof;
-		} else if (nums[i].textContent > arr[i]) {
-			nums[i].textContent = arr[i];
-		} else if (nums[i].textContent >= max) {
-			clearInterval(stop);
-		}
-	}
-}
